@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/* basic */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #010101;
+  color: #f1f1f1;
+  font-size: 24px;
+  scroll-behavior: smooth;
+  /* width: 100%;
+  height: 100%;
+  --s: 200px;
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577); */
+}
+
+/* navigation bar above */
+nav {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  background: #010101;
+}
+nav .img-logo {
+  width: 100px;
+  height: 100px;
+}
+nav .login-btn a {
+  text-decoration: none;
+  color: #010101;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.login-btn i{
+    font-size: 24px;
+}
+nav .login-btn {
+  width: 150px;
+  height: 70px;
+  border: 1px solid #f1f1f1;
+  background: #f1f1f1;
+  border-radius: 60px;
+  margin-right: 10px;
+}
+nav .login-btn:hover{
+    background: #ffd900;
+    border: #ffd900 1px solid;
+    transition: 0.5s;
+}
+
+/* main text */
+.main-text {
+  text-align: center;
+  margin-top: 15vh;
+}
+.main-text h1 span {
+  color: #ffd900;
+}
+.main-text p {
+  font-size: 24px;
+}
+
+/* main preview */
+.main-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 10vh;
+  margin-bottom: 15vh;
+}
+.box-image{
+    width: 350px;
+    height: 300px;
+    background-color: #f1f1f1;
+    color: #010101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 15px 0;
+}
+.main-preview:hover > :not(:hover){
+    opacity: 0.3;
+    transition: 0.5s;
+}
+.box-image img{
+    width: 340px;
+    height: auto;
+    border-radius: 15px;
+}
+.box-image h3{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+/* our purpose */
+.our-purpose{
+    background-color: #f1f1f1;
+    color: #010101;
+    padding: 10px 150px 10px 150px;
+    display: flex;
+    justify-content: space-between;
+    height:70dvh;
+    width: fit-content;
+    align-items: center;
+}
+.our-purpose h2{
+    padding-right: 15vw;
+    width: max-content;
+    white-space: nowrap;
+}
+.our-purpose p{
+  overflow: hidden;
+}
+
+/* about us */
+.about-us{
+    background-color: #a7a7a7;
+    color: #010101;
+    padding: 10px 150px 10px 150px;
+    display: flex;
+    justify-content: space-between;
+    height: 70dvh;
+    width: fit-content;
+    align-items: center;
+}
+.about-us h2{
+    padding-left: 15vw;
+    /* width: max-content; */
+    white-space: nowrap;
+}
+.about-us p{
+  overflow: hidden;
+}
+
+/* footer  */
+footer .contact{
+    display: flex;
+    padding: 50px 30px 50px 30px;
+    background: #1a1a1a;
+    font-size: 16px;
+}
+.contact ul li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+.contact ul li i{
+  margin-right: 10px;
+}
+.copyright{
+    height: 20px;
+    padding: 0 50px 0 50px;
+}
+.copyright p{
+    text-align: center;
+    font-size: 12px;
+}

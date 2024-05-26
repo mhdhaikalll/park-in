@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  /* background: #0a0a0a; */
+  /* background: #f9f9f9; */
+  /* background-image: repeating-linear-gradient(0deg, rgb(41, 41, 41) 0px, rgb(41, 41, 41) 1px,transparent 1px, transparent 21px),repeating-linear-gradient(90deg, rgb(41, 41, 41) 0px, rgb(41, 41, 41) 1px,transparent 1px, transparent 21px),linear-gradient(90deg, hsl(87,0%,9%),hsl(87,0%,9%)); */
+  
+}
+
+.container {
+  perspective: 1000px;
+  width: 300px;
+  height: 400px;
+}
+
+.login-sect, .register-sect {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a0a0a;
+}
+fieldset {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #f9f9f9;
+  background: #f9f9f9;
+  border-radius: 15px;
+  /* box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.9); */
+  box-shadow: 0 0 15px 15px rgba(77, 77, 77, 0.623);
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"],
+input[type="tel"] {
+  /* width: calc(100% - 40px); */
+  width: 250px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
