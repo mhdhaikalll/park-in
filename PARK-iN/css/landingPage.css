@@ -124,42 +124,52 @@ nav .login-btn:hover{
 
 /* our purpose */
 .our-purpose{
-    background-color: #f1f1f1;
-    color: #010101;
-    padding: 10px 150px 10px 150px;
-    display: flex;
-    justify-content: space-between;
-    height:70dvh;
-    width: fit-content;
-    align-items: center;
+  background-color: #f1f1f1;
+  color: #010101;
+  padding: 10px 150px 10px 150px;
+  display: flex;
+  justify-content: space-between;
+  height:70dvh;
+  width: fit-content;
+  align-items: center;
 }
 .our-purpose h2{
-    padding-right: 15vw;
-    width: max-content;
-    white-space: nowrap;
+  padding-right: 15vw;
+  width: max-content;
+  white-space: nowrap;
 }
-.our-purpose p{
-  overflow: hidden;
+.our-purpose p {
+/* overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+font-size: inherit;  */
+overflow-wrap: break-word;
+font-size: 2vw;
 }
 
 /* about us */
 .about-us{
-    background-color: #a7a7a7;
-    color: #010101;
-    padding: 10px 150px 10px 150px;
-    display: flex;
-    justify-content: space-between;
-    height: 70dvh;
-    width: fit-content;
-    align-items: center;
+  background-color: #a7a7a7;
+  color: #010101;
+  padding: 10px 150px 10px 150px;
+  display: flex;
+  justify-content: space-between;
+  height: 70dvh;
+  width: fit-content;
+  align-items: center;
 }
 .about-us h2{
-    padding-left: 15vw;
-    /* width: max-content; */
-    white-space: nowrap;
+  padding-left: 15vw;
+  /* width: max-content; */
+  white-space: nowrap;
 }
 .about-us p{
-  overflow: hidden;
+/* overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+font-size: inherit;  */
+overflow-wrap: break-word;
+font-size: 2vw;
 }
 
 /* footer  */
