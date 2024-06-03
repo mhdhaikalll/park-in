@@ -1,0 +1,56 @@
+<?php
+session_start();
+include "dbconn.php";
+
+// Check if the user is logged in
+if (!isset($_SESSION['username']) || $_SESSION['role'] != 'user') {
+    header("Location: login.html");
+    exit();
+}
+
+// Fetch user data from the database
+$username = $_SESSION['username'];
+$sql = "SELECT * FROM user WHERE Username = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $username);
+$stmt->execute();
+$result = $stmt->get_result();
+$user = $result->fetch_assoc();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/userPage.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="img/estd_2024-removebg-preview.png" type="png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>PARK-iN</title>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- Fetch data about username from db-->
+        <a href="#">Welcome, <?php echo htmlspecialchars($user['Username']); ?></a>
+        <a href="#">Email: <?php echo htmlspecialchars($user['Email']); ?></a>
+        <a href="#">Phone: <?php echo htmlspecialchars($user['PhoneNumber']); ?></a>
+        <a href="logout.php">Logout</a>
+    </div>
+    
+    <!-- Use any element to open the sidenav -->
+    <span onclick="openNav()"><i class="fa-sharp fa-solid fa-bars"></i></span>
+    
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+        <h1>Welcome to <span>PARK-iN</span></h1>
+        <p>Safety and efficiency is our motto</p>
+        <div class="button">
+            <button class="book"><a href="make_booking.html">Make a Booking</a></button>
+            <button class="view"><a href="view_booking.html">See your Booking</a></button>
+        </div>
+    </div>
+</body>
+<script src="script/script.js"></script>
+</html>
