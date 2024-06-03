@@ -33,10 +33,12 @@ $user = $result->fetch_assoc();
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <!-- Fetch data about username from db-->
-        <a href="#">Welcome, <?php echo htmlspecialchars($user['Username']); ?></a>
-        <a href="#">Email: <?php echo htmlspecialchars($user['Email']); ?></a>
-        <a href="#">Phone: <?php echo htmlspecialchars($user['PhoneNumber']); ?></a>
-        <a href="logout.php">Logout</a>
+        <div class="details">
+            <p>Welcome, <span><?php echo htmlspecialchars($user['Username']); ?></span></p>
+            <p>Email: <?php echo htmlspecialchars($user['Email']); ?></p>
+            <p>Phone: <?php echo htmlspecialchars($user['PhoneNumber']); ?></p>
+            <button><a href="logout.php">Logout</a></button>
+        </div>
     </div>
     
     <!-- Use any element to open the sidenav -->
