@@ -39,3 +39,11 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
   document.body.style.backgroundColor = "black";
 }
+
+//userpage
+document.addEventListener('DOMContentLoaded', (event) => {
+  let button = document.querySelector(".book");
+  button.addEventListener("click", function() {
+      window.location.href = "make_booking.html";
+  });
+});
