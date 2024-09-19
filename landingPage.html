@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PARK-iN</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/up.png" type="png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+      /* basic */
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #101010;
+        color: #e1e1e1;
+        font-size: 24px;
+        scroll-behavior: smooth;
+      }
+      /* navigation bar above */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        row-gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 10px;
+        background: #101010;
+      }
+      nav .img-logo {
+        width: 100px;
+        height: 100px;
+      }
+      nav .login-btn a {
+        text-decoration: none;
+        color: #101010;
+        margin-right: 10px;
+        font-size: 20px;
+      }
+      .login-btn i {
+        font-size: 24px;
+      }
+      nav .login-btn {
+        width: 150px;
+        height: 70px;
+        border: 1px solid #e1e1e1;
+        background: #e1e1e1;
+        border-radius: 60px;
+        margin-right: 10px;
+      }
+      nav .login-btn:hover {
+        background: #ffd900;
+        border: #ffd900 1px solid;
+        transition: 0.5s;
+      }
+      /* main text */
+      .main-text {
+        text-align: center;
+        margin-top: 15vh;
+      }
+      .main-text h1 span {
+        color: #ffd900;
+      }
+      .main-text p {
+        font-size: 24px;
+      }
+      /* main preview */
+      .main-preview {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+        margin-top: 10vh;
+        margin-bottom: 15vh;
+      }
+      .box-image {
+        width: 350px;
+        height: 300px;
+        background-color: #e1e1e1;
+        color: #101010;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        cursor: pointer;
+        border-radius: 15px 0;
+      }
+      .main-preview:hover > :not(:hover) {
+        opacity: 0.3;
+        transition: 0.5s;
+      }
+      .box-image img {
+        width: 340px;
+        height: auto;
+        border-radius: 15px;
+      }
+      .box-image h3 {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 20px;
+      }
+      /* our purpose */
+      .our-purpose {
+        background-color: #e1e1e1;
+        color: #101010;
+        padding: 10px 150px 10px 150px;
+        display: flex;
+        justify-content: space-between;
+        height: 75dvh;
+        width: fit-content;
+        align-items: center;
+        position: static;
+      }
+      .our-purpose h2 {
+        padding-right: 15vw;
+        width: max-content;
+        white-space: nowrap;
+      }
+      .our-purpose p {
+        overflow-wrap: break-word;
+        font-size: 1.5vw;
+      }
+      /* about us */
+      .about-us {
+        background-color: #a5a5a5;
+        color: #101010;
+        padding: 10px 150px 10px 150px;
+        display: flex;
+        justify-content: space-between;
+        height: 75dvh;
+        width: fit-content;
+        align-items: center;
+        position: static;
+      }
+      .about-us h2 {
+        padding-left: 15vw;
+        white-space: nowrap;
+      }
+      .about-us p {
+        overflow-wrap: break-word;
+        font-size: 1.5vw;
+      }
+
+      /* footer  */
+      footer .contact {
+        display: flex;
+        padding: 50px 30px 50px 30px;
+        background: #1a1a1a;
+        font-size: 16px;
+      }
+      .contact ul li {
+        list-style: none;
+        margin-bottom: 10px;
+      }
+      .contact ul li i {
+        margin-right: 10px;
+      }
+      .copyright {
+        height: 20px;
+        padding: 0 50px 0 50px;
+      }
+      .copyright p {
+        text-align: center;
+        font-size: 12px;
+      }
+
+      /* reveal animations */
+      .reveal {
+        transform: translateY(150px);
+        opacity: 0;
+        transition: 1.5s all ease;
+      }
+      .reveal.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img
+        src="img/down.png"
+        alt="logo"
+        class="img-logo"
+      />
+      <button class="login-btn">
+        <a href="php/login.php"><b>LOGIN</b></a
+        ><i class="fa-solid fa-user"></i>
+      </button>
+    </nav>
+    <main>
+      <div class="main-text">
+        <h1>WELCOME TO <span>PARK-iN</span></h1>
+        <p>
+          Let PARK-iN do your bookings to ensure you always got a spot for an
+          event
+        </p>
+      </div>
+      <div class="main-preview">
+        <div class="box-image">
+          <img src="img/bday.jpg" alt="birthday-party" class="bday" />
+          <h3>BIRTHDAY PARTY</h3>
+        </div>
+        <div class="box-image">
+          <img
+            src="img/Private & Corporate Events - Acreage Restaurant.jpg"
+            alt="private-event"
+            class="priv"
+          />
+          <h3>PRIVATE EVENT</h3>
+        </div>
+        <div class="box-image">
+          <img src="img/wedding.jpg" alt="wedding-reception" class="wedd" />
+          <h3>WEDDING RECEPTION</h3>
+        </div>
+        <div class="box-image">
+          <img src="img/808 Festival.jpg" alt="concert" class="conc" />
+          <h3>CONCERT</h3>
+        </div>
+      </div>
+    </main>
+    <div class="our-purpose reveal">
+      <h2>Our Purpose</h2>
+      <p>
+        Welcome to PARK-iN! We make parking easy and stress-free. Whether you're
+        at work, shopping, or at an event, we've got you covered.
+        <br /><br />Say goodbye to parking hassles. With PARK-iN, your car is
+        safe, and you can enjoy your day worry-free. <br /><br />Experience the
+        future of parking with us. Simple, convenient, and secure. Welcome to
+        PARK-iN!
+      </p>
+    </div>
+    <div class="about-us reveal">
+      <p>
+        Since 2024, PARK-iN has been transforming parking solutions for private
+        events across South East Asia. <br /><br />We cater to a variety of
+        events—from weddings and birthdays to concerts and private parties.
+        <br /><br />Our expert team, including planners, engineers, and tech
+        specialists, is dedicated to providing seamless and efficient parking
+        services, ensuring your event runs smoothly.
+      </p>
+      <h2>About Us</h2>
+    </div>
+    <footer>
+      <div class="contact">
+        <ul>
+          <li><i class="fa-solid fa-envelope"></i>cs@parkin.my</li>
+          <li><i class="fa-solid fa-phone"></i>+60 11 453-7633</li>
+          <li>
+            <i class="fa-solid fa-location-dot"></i>Malaysia<br />Plaza Vads, No
+            1, Jalan Tun Mohd Fuad<br />
+            Taman Tun Dr Ismail<br />60000 Kuala Lumpur Malaysia
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div class="copyright">
+      <p>Copyright © 2024 PARK-iN. All rights reserved.</p>
+    </div>
+  </body>
+  <script>
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+    // Initial check to reveal elements already in view
+    document.addEventListener("DOMContentLoaded", reveal);
+  </script>
+</html>
